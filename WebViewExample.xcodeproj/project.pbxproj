@@ -14,6 +14,9 @@
 		9DF533A520F8FCA400A67412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF533A320F8FCA400A67412 /* LaunchScreen.storyboard */; };
 		9DF533B020F8FCA400A67412 /* WebViewExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF533AF20F8FCA400A67412 /* WebViewExampleTests.swift */; };
 		9DF533BB20F8FCA400A67412 /* WebViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF533BA20F8FCA400A67412 /* WebViewExampleUITests.swift */; };
+		9DF533CA20F8FD0500A67412 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF533C920F8FD0500A67412 /* WebKit.framework */; };
+		9DF533D220F8FF6A00A67412 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = 9DF533D120F8FF6A00A67412 /* example.js */; };
+		9DF533D420F8FF7A00A67412 /* example.html in Resources */ = {isa = PBXBuildFile; fileRef = 9DF533D320F8FF7A00A67412 /* example.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		9DF533B620F8FCA400A67412 /* WebViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF533BA20F8FCA400A67412 /* WebViewExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewExampleUITests.swift; sourceTree = "<group>"; };
 		9DF533BC20F8FCA400A67412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF533C920F8FD0500A67412 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		9DF533D120F8FF6A00A67412 /* example.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
+		9DF533D320F8FF7A00A67412 /* example.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = example.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF533CA20F8FD0500A67412 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 				9DF533AE20F8FCA400A67412 /* WebViewExampleTests */,
 				9DF533B920F8FCA400A67412 /* WebViewExampleUITests */,
 				9DF5339820F8FCA200A67412 /* Products */,
+				9DF533C820F8FD0500A67412 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +111,8 @@
 				9DF533A120F8FCA400A67412 /* Assets.xcassets */,
 				9DF533A320F8FCA400A67412 /* LaunchScreen.storyboard */,
 				9DF533A620F8FCA400A67412 /* Info.plist */,
+				9DF533D120F8FF6A00A67412 /* example.js */,
+				9DF533D320F8FF7A00A67412 /* example.html */,
 			);
 			path = WebViewExample;
 			sourceTree = "<group>";
@@ -123,6 +133,14 @@
 				9DF533BC20F8FCA400A67412 /* Info.plist */,
 			);
 			path = WebViewExampleUITests;
+			sourceTree = "<group>";
+		};
+		9DF533C820F8FD0500A67412 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DF533C920F8FD0500A67412 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF533D220F8FF6A00A67412 /* example.js in Resources */,
+				9DF533D420F8FF7A00A67412 /* example.html in Resources */,
 				9DF533A520F8FCA400A67412 /* LaunchScreen.storyboard in Resources */,
 				9DF533A220F8FCA400A67412 /* Assets.xcassets in Resources */,
 				9DF533A020F8FCA200A67412 /* Main.storyboard in Resources */,
