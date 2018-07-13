@@ -1,3 +1,3 @@
 function onButtonClicked(btn) {
-    window.webkit.messageHandlers.interop.postMessage(btn.value)
+    window.webkit.messageHandlers.handler1.postMessage(btn.value)
 }

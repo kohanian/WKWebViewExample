@@ -15,18 +15,17 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
     
     lazy var wkWebView: WKWebView = {
         let configuration = WKWebViewConfiguration()
-        configuration.userContentController.add(self, name: "interop")
+        configuration.userContentController.add(self, name: "handler1")
         let webView = WKWebView(frame: .zero, configuration: configuration)
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.scrollView.isScrollEnabled = true
         webView.navigationDelegate = self
         webView.allowsBackForwardNavigationGestures = false
         view.addSubview(webView)
-        let constraintTop = NSLayoutConstraint(item: webView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 0)
-        let constraintBottom = NSLayoutConstraint(item: webView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0)
-        let constraintLeading = NSLayoutConstraint(item: webView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1.0, constant: 0)
-        let constraintTrailing = NSLayoutConstraint(item: webView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: 0)
-        NSLayoutConstraint.activate([constraintTop, constraintBottom, constraintLeading, constraintTrailing])
+        webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        webView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        webView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         return webView
     }()
 
@@ -49,7 +48,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         // TODO
-        if(message.name == "interop") {
+        if(message.name == "handler1") {
             print("Message From button pressed: \(message.body)")
         }
     }
